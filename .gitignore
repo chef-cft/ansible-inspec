@@ -1,2 +1,5 @@
 # ignore test kitchen files
 .kitchen/
+
+# ignore video files
+demo-video.prproj
