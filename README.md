@@ -2,12 +2,10 @@
 This repo lets you demonstrate test driven development using Ansible and Test Kitchen
 
 # Prerequisites
-Install test kitchen, inspec, and ansible. Install the kitchen-ansible gem (Chef gem install kitchen-ansible)
+Install test kitchen, inspec, and ansible. Install the kitchen-ansible gem (`chef gem install kitchen-ansible`)
 
-# Description here
-`kitchen create`  <-- create our test VM  
-`kitchen verify`  <-- look doesn't pass first test  
-Let's write some code to let it pass the test!  
-`kitchen converge` <-- this will run our ansible playbook  
-`kitchen verify` <-- this will run the test again  
+# How To
+From the main directory, run `kitchen test`. It will first run a kitchen create to create the infrastructure. Then it will run a kitchen converge to apply the Ansible Playbook. Next it will run a kitchen verify to run the Chef InSpec tests. Finally, it will run a kitchen destroy to cleanup the infrastructure.
 
+# Demonstration Script
+There is a simple demonstration script stored as SCRIPT.md

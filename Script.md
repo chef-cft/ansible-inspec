@@ -14,10 +14,10 @@ Later, on line seventeen, you can see I will be using Chef InSpec as my testing 
 
 Test kitchen has four basic commands to provision platforms and test infrastructure code. 
 
-Create - to create the target infrastructure (which is our CentOS node)
-Converge - to run the infrastructure code (in our case the playbook)
-Verify - to run the tests (in our case Chef InSpec tests)
-Destroy - to destroy the target infrastructure (our CentOS node)
+`kitchen create` - to create the target infrastructure (which is our CentOS node)  
+`kitchen converge` - to run the infrastructure code (in our case the playbook)  
+`kitchen verify` - to run the tests (in our case Chef InSpec tests)  
+`kitchen destroy` - to destroy the target infrastructure (our CentOS node)  
 
 We're going to use test driven development which means our first step to automating the installation of Apache on our CentOS box is to write our tests.
 
@@ -33,7 +33,7 @@ Now that our test environment is up, let's run our tests against it.
 
 As expected, the test fails. So now we write the code to pass the tests.  Currently, my site.yml contains a very simple beginning, instructions to update the yum cache. I'm going to work one by one through my failed tests and add the necessary instructions.
 
-First, we'll install the package.
+First, we'll add code to install the package.
 
 ```
     - name: Install necessary packages  
