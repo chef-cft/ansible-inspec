@@ -2,4 +2,5 @@
 .kitchen/
 
 # ignore video files
-demo-video.prproj
+./demo-video.prproj
+./Adobe\ Premiere\ Pro\ Auto-Save/
